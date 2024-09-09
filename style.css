@@ -1,0 +1,57 @@
+*
+
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+
+}
+
+body
+{
+display: flex;
+justify-content: center;
+align-items: center;
+min-height: 100vh;
+background: #292929;
+}
+
+h2
+{
+position: relative;
+font-size: large;
+color: #292929;
+-webkit-text-stroke: 0.3vw #080909; 
+text-transform: uppercase;
+
+}
+
+h2::before
+{
+    content: attr(data-text);
+    position: absolute;
+    top:0;
+    left:0;
+    width: 0;
+    height: 100%;
+    color: rgb(181, 182, 182);
+    -webkit-text-stroke: 0vw #292822;
+    border-right: 2px solid #080808;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+}
+@keyframes animate
+{
+   0%,10%,100%
+   {
+    width: 0;
+
+   }
+   70%,90%
+   {
+    width: 100%;
+   }
+
+}
